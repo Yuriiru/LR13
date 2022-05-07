@@ -1,0 +1,22 @@
+package com.company;
+
+import java.util.regex.Matcher;
+import java.util.regex.Pattern;
+
+
+public class Main {
+
+
+    public static void main(String[] args) {
+	    Pattern p = Pattern.compile(mDemo.rEGEXP);
+        Matcher m = p.matcher(mDemo.input);
+        while(m.find()){
+            System.out.println(m.start(1)); 
+        }
+    }
+}
+
+class mDemo{
+    public static String rEGEXP = "(a*b)(foo)";
+    public static String input = "aabfooaabfooabfoob";
+}
